@@ -11,9 +11,20 @@ services:
              - net
         remote_host:
            container_name: remote-host
-           image: remote-host 
+           image: remote-host
            build: 
              context: centos7
+           volumes:
+             - "$PWD/aws-s3.sh:/tmp/script.sh"
+           networks:      
+             - net
+        db_host:
+           container_name: db
+           image: mysql:5.7
+           environment:
+             - "MYSQL_ROOT_PASSWORD=mysupersecret"
+           volumes:
+             - "$PWD/db_data:/var/lib/mysql"
            networks:
              - net
 networks:
