@@ -1,0 +1,6 @@
+---
+- hosts: test1
+  tasks:
+    - shell: echo Hello World from Ansible > /tmp/ansible-file
+    - debug:
+             msg: "{{ MSG  }}"
