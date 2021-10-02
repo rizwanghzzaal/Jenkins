@@ -8,6 +8,7 @@
 !/.gitignore
 !/*.xml
 jenkins-ansible/db_data
+jenkins-ansible/remote-key
 #ignore all files in jobs subdirectories except for folders
 #note: git doesn't track folders, only file content
 jobs/**
