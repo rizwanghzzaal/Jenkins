@@ -1,0 +1,2 @@
+# Create Crumb via CLI Jenkins
+curl -u "USERNAME:PASSWORD" -s 'http://jenkins.localhost:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)'
